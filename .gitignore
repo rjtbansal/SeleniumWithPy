@@ -1,1 +1,4 @@
-!src/*.py
+.project
+src/geckodriver.log
+.project
+.pydevproject
