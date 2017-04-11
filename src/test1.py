@@ -10,4 +10,5 @@ driver_firefox=webdriver.Firefox("C:\Python27\Scripts")
 driver_chrome.get("http://www.facebook.com") #opening facebook in chrome
 driver_firefox.get("http://www.cricinfo.com") #opening cricinfo in firefox
 
-#end
+driver_ie=webdriver.Ie() #running IE
+driver_ie.get("https://www.w3schools.com/xml/xpath_intro.asp")
