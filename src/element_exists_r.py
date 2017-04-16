@@ -23,7 +23,7 @@ def element_exists(locator_attribute, locator_text):
                             The approved attributes are : %s ' % possible_locators)
 
     try:
-        driver.find_element(locator_attribute, locator_text)
+        driver.find_element(locator_attribute, locator_text) #finding the attribute and its text
         return True
     except:
         return False
@@ -48,7 +48,7 @@ def element_visible(element):
     :return:
     """
 
-    if element.is_displayed():
+    if element.is_displayed(): #simply checking if element is visible..for example elements of type hidden arent visible but they do exist
         return True
     else:
         return False
@@ -79,6 +79,5 @@ def find_and_assert_element_visible(locator_type, search_term):
         print 'The element is visible. :)'
 
 
-assert_element_exists('id', 'menulinktutorials')
-
-find_and_assert_element_visible('id', 'menulinktutorials')
+assert_element_exists('class name', 'w3-example')
+#find_and_assert_element_visible('class', 'w3-col 16')
