@@ -10,18 +10,18 @@ class FindByXpathAndCss():
         self.driver.get(base_url)
     
     def findByXpath(self):
-        elementById=self.driver.find_element_by_id("namehhhh")
-        if elementById:
-            print "%s id is found" % (elementById)
+        elementByXpath=self.driver.find_element_by_xpath(".//input[@id='name']")
+        if elementByXpath:
+            print "%s xpath is found" % (elementByXpath)
         else:
-            print "%s is not found" % (elementById)
+            print "%s is not found" % (elementByXpath)
             
     def findByCss(self):
-        elementByName=self.driver.find_element_by_name("show-hide")
-        if elementByName:
-            print "%s name is found" % (elementByName)
+        elementByCss=self.driver.find_element_by_css_selector("#displayed-text")
+        if elementByCss:
+            print "%s css is found" % (elementByCss)
         else:
-            print "%s name is not found" % (elementByName)
+            print "%s css is not found" % (elementByCss)
     
 findInstance = FindByXpathAndCss()
 findInstance.getUrl()
