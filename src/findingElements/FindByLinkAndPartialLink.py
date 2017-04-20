@@ -10,18 +10,18 @@ class FindByLinkAndPartialLink():
         self.driver.get(base_url)
     
     def findByLinkText(self):
-        elementById=self.driver.find_element_by_id("namehhhh")
-        if elementById:
-            print "%s id is found" % (elementById)
+        elementByLinkText=self.driver.find_element_by_link_text("Login")
+        if elementByLinkText:
+            print "%s link is found" % (elementByLinkText)
         else:
-            print "%s is not found" % (elementById)
+            print "%s is not found" % (elementByLinkText)
             
     def findByPartialLinkText(self):
-        elementByName=self.driver.find_element_by_name("show-hide")
-        if elementByName:
-            print "%s name is found" % (elementByName)
+        elementByParitalLink=self.driver.find_element_by_partial_link_text("Pract") #so if an a tag has text Practice this will match
+        if elementByParitalLink:
+            print "%s partial link is found" % (elementByParitalLink)
         else:
-            print "%s name is not found" % (elementByName)
+            print "%s partial link is not found" % (elementByParitalLink)
     
 findInstance = FindByLinkAndPartialLink()
 findInstance.getUrl()
