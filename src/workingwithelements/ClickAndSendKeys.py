@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 import time
 
 class ClickAndSendKeys():   
-    driver=webdriver.Chrome()
+    driver=webdriver.Chrome(executable_path="C:\\Users\\rjtba\\Downloads\\BrowserDrivers\\chromedriver.exe")
     #driver = webdriver.Firefox() #somehow the firefox version I had didnt support send_keys and I ended up getting string undefined error
     
     def getUrl(self, base_url):

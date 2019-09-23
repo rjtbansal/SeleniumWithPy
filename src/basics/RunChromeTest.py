@@ -1,13 +1,13 @@
 from selenium import webdriver
 
-class IETest():
+class ChromeTest():
     
     def test(self):
         #getting the driver instance for Firefox
-        driver=webdriver.Chrome()
+        driver=webdriver.Chrome(executable_path="C:\\Users\\rjtba\\Downloads\\BrowserDrivers\\chromedriver.exe")
         #opening the specified URL
         driver.get("https://www.yahoo.com/")
 
 
-ieTest = IETest()
-ieTest.test()
+chromeTest = ChromeTest()
+chromeTest.test()

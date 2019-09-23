@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 
 class FindBy():
     
-    driver = webdriver.Firefox()
+    driver = webdriver.Firefox(executable_path="C:\\Users\\rjtba\\Downloads\\BrowserDrivers\\geckodriver.exe")
     
     def getUrl(self):
         base_url="https://letskodeit.teachable.com/p/practice"    
@@ -13,21 +13,22 @@ class FindBy():
     def findElement(self):
         elementById=self.driver.find_element(By.ID, "name") 
         if elementById:
-            print "%s id is found" % (elementById)
+            print("%s id is found" % (elementById))
         else:
-            print "%s is not found" % (elementById)
+            print("%s is not found" % (elementById))
             
         elementByXpath=self.driver.find_element(By.XPATH, '//*[@id="product"]');
         if elementByXpath:
-            print "Xpath found"
+            print("Xpath found")
         else:
-            print "xpath not found"  
+            print("xpath not found")
             
-        elementByLink = self.driver.find_element(By.LINK_TEXT, "Login") 
+        elementByLink = self.driver.find_element(By.LINK_TEXT, "Login")
+
         if elementByLink:
-            print "Link found"
+            print("Link found")
         else:
-            print "Link not found" 
+            print("Link not found")
     
 findInstance = FindBy()
 findInstance.getUrl()

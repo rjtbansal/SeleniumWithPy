@@ -1,7 +1,7 @@
 from selenium import webdriver
 
 class ElementState():
-    driver = webdriver.Firefox()
+    driver = webdriver.Firefox(executable_path="C:\\Users\\rjtba\\Downloads\\BrowserDrivers\\geckodriver.exe")
     
     def getUrl(self, base_url):
         self.driver.get(base_url)

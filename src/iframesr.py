@@ -31,4 +31,4 @@ print heading.text
 second_frame = driver.find_element('id', 'ad-frame')
 driver.switch_to.frame(second_frame)
 image_link = driver.find_element('id', 'ad_image')
-print image_link.get_attribute('src')
+print(image_link.get_attribute('src'))

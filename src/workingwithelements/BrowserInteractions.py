@@ -2,7 +2,7 @@ from selenium import webdriver
 
 class BrowserInteractions():
     
-    driver=webdriver.Firefox()
+    driver=webdriver.Firefox(executable_path="C:\\Users\\rjtba\\Downloads\\BrowserDrivers\\geckodriver.exe")
     
     def getUrl(self):
         base_url="https://letskodeit.teachable.com/p/practice"
@@ -46,6 +46,7 @@ class BrowserInteractions():
         
         #Go forward
         self.driver.forward()
+
         current_url = self.driver.current_url 
         print("Moved forward one page: "+current_url)
         

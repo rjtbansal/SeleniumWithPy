@@ -73,8 +73,8 @@ def assert_checkbox_is_enabled(element):
 
 java_box = driver.find_element_by_name('java')
 
-print is_checkbox_selected(java_box)
+print(is_checkbox_selected(java_box))
 assert_checkbox_is_enabled(java_box)
 
 php_box = driver.find_element_by_name('php')
-print php_box.is_enabled()
+print(php_box.is_enabled())

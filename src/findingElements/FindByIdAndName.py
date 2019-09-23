@@ -3,7 +3,7 @@ from selenium import webdriver
 
 class FindByClassAndTag():
     
-    driver = webdriver.Firefox()
+    driver = webdriver.Firefox(executable_path="C:\\Users\\rjtba\\Downloads\\BrowserDrivers\\geckodriver.exe")
     
     def getUrl(self):
         base_url="https://letskodeit.teachable.com/p/practice"    
@@ -12,16 +12,16 @@ class FindByClassAndTag():
     def findByClass(self):
         elementById=self.driver.find_element_by_id("namehhhh")
         if elementById:
-            print "%s id is found" % (elementById)
+            print("%s id is found" % (elementById))
         else:
-            print "%s is not found" % (elementById)
+            print("%s is not found" % (elementById))
             
     def findByTag(self):
         elementByName=self.driver.find_element_by_name("show-hide")
         if elementByName:
-            print "%s name is found" % (elementByName)
+            print("%s name is found" % (elementByName))
         else:
-            print "%s name is not found" % (elementByName)
+            print("%s name is not found" % (elementByName))
     
 findInstance = FindByClassAndTag()
 findInstance.getUrl()
